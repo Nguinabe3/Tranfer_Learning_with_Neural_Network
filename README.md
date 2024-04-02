@@ -23,8 +23,8 @@ The goal of transfer learning is to improve the learning performance of the mode
 ## Methodology
 ### Data Preparation:
 We started by preparing our data set to be in good shape before proceeding with our tasks.
-The MNIST dataset consists of $70,000$ images of handwritten numbers ranging from $0$ to $9$, with a resolution of $28 * 28 $ pixels.  These images were accompanied by corresponding labels indicating the presented digit number. 
-So, here we started by splitting the data set into two parts, one with odd numbers, $0, 1, 3, 5, 7, 9 $ and the other one with even numbers $0, 2, 4, 6, 8$. We then proceeded to divide each of the dataset into train ($80\%$ )and test ($20\%$ ). This was followed by normalizing the data set, flattening the 2D pixel arrays into 1D arrays and finally we applied onehot encoding on the labels to have a binary representation for easy computation.
+The MNIST dataset consists of $70,000$ images of handwritten numbers ranging from $0$ to $9$, with a resolution of $28*28$ pixels.  These images were accompanied by corresponding labels indicating the presented digit number. 
+So, here we started by splitting the data set into two parts, one with odd numbers, $0,1,3,5,7,9$ and the other one with even numbers $0,2,4,6,8$. We then proceeded to divide each of the dataset into train ($80\%$) and test ($20\%$). This was followed by normalizing the data set, flattening the 2D pixel arrays into 1D arrays and finally we applied onehot encoding on the labels to have a binary representation for easy computation.
 > Task 1: Softmax regression model
 In the first task, we built a softmax regression model to serve as our base model on each of the datasets. It is a simple linear model with a softmax activation function. We trained the model using the PyTorch library in Python. We optimized the parameters using the Adam optimizer and tuning hyperparameters such as the learning rate and number of epochs.
   
@@ -38,8 +38,9 @@ Softmax converts raw scores into probabilities, commonly used in multi-class cla
 
 Our second task was on training two neural networks, one even numbers and the other one on odd numbers. Each of the neural networks had one hidden layer with $300$ neurons, a ReLU activation function on the hidden layer and a sigmoid activation function on the output layer. ReLU sets negative values to zero and leaves positive values unchanged.
 
-$\textbf{ReLU}\\
-g(z) = \begin{cases}
+$\textbf{ReLU}$
+
+$g(z) = \begin{cases}
     0,\ \ \text{if}\ \ z<0\\
     z,\ \ \ \text{otherwise}
 \end{cases}$
