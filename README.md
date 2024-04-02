@@ -40,10 +40,10 @@ Our second task was on training two neural networks, one even numbers and the ot
 
 $\textbf{ReLU}$
 
-$g(z) = \begin{cases}
+$$g(z) = \begin{cases}
     0,\ \ \text{if}\ \ z<0\\
     z,\ \ \ \text{otherwise}
-\end{cases}$
+\end{cases}$$
     
    
 > $\textbf{Task 3: Transfer learning on Neural Networks}$ Here, we applied transfer learning on the two neural network models that we built. The first instance was to use the even neural network weights to train the odd set and the second instance was using odd neural network weights and applying it on the even dataset.
@@ -53,9 +53,9 @@ $g(z) = \begin{cases}
 
 > $\textbf{Task 1: Softmax regresssion}$
     
-$\textbf{Model Selection:}$ 
+$\textbf{Model Selection:}$
 
-We used a $\textit{\textbf{Soft-max Regression model} }$ to perform our multi-class classification task.
+We used a $\textit{\textbf{Soft-max Regression model}}$ to perform our multi-class classification task.
     
 $\textbf{Hyperparameters:}$ 
 
@@ -96,7 +96,7 @@ The comparison highlights the superior performance of the Neural Network models,
 of Neural Networks by leveraging pre-trained parameters, leading to improved performance and faster convergence. Despite longer training times, Neural Networks offer greater flexibility and effectiveness in capturing complex patterns in the data. However, Softmax Regression provides simplicity and interpretability, making it suitable for simpler classification tasks.
 
 # Usage case :
- 1. Clone the repository using: git clone https://github.com/Nguinabe3/Tranfer_Learning_with_Neural_Network >>
+ 1. Clone the repository using: git clone https://github.com/Nguinabe3/Tranfer_Learning_with_Neural_Network 
  
  2. Go to load_data.py and run the content. This will download the MNIST data, split in to EVEN and ODD and save them as .csv file namely df_odd and df_even.
 
