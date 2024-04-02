@@ -38,7 +38,7 @@ Softmax converts raw scores into probabilities, commonly used in multi-class cla
 
 Our second task was on training two neural networks, one even numbers and the other one on odd numbers. Each of the neural networks had one hidden layer with $300$ neurons, a ReLU activation function on the hidden layer and a sigmoid activation function on the output layer. ReLU sets negative values to zero and leaves positive values unchanged.
 
-$ \textbf{ReLU}\\
+$\textbf{ReLU}\\
 g(z) = \begin{cases}
     0,\ \ \text{if}\ \ z<0\\
     z,\ \ \ \text{otherwise}
@@ -52,13 +52,13 @@ g(z) = \begin{cases}
 
 > $\textbf{Task 1: Softmax regresssion}$
     
-$\textbf{Model Selection: }$ 
+$\textbf{Model Selection:}$ 
 
 We used a $\textit{\textbf{Soft-max Regression model} }$ to perform our multi-class classification task.
     
 $\textbf{Hyperparameters:}$ 
 
-Our hyperparameters in this task included the number of iteration / epochs which were $ 300 $ and the learning rate which was $ 0.01 $.  For the even data set, the model achieved an accuracy of $0.9641$ on the training dataset with a training time of $16.69$ seconds. For odd numbers, we obtained an accuracy of $0.9804$ with a training time of $26.07$ seconds. 
+Our hyperparameters in this task included the number of iteration / epochs which were $300$ and the learning rate which was $0.01$.  For the even data set, the model achieved an accuracy of $0.9641$ on the training dataset with a training time of $16.69$ seconds. For odd numbers, we obtained an accuracy of $0.9804$ with a training time of $26.07$ seconds. 
 
 
    
@@ -70,7 +70,7 @@ We used a $\textit{\textbf{Neural Network} }$ to perform our multi-class classif
     
 $\textbf{Hyperparameters:}$
 
-Our hyperparameters in this task included the number of iteration / epochs which were $ 300 $ and the learning rate which was $ 0.01 $. We used the adam optimizer in our hyparparameter tuning ans the SGD optimizer had lower results as compared to adam.  For the even data set, the model achieved an accuracy of $0.9807$ on the training dataset with a training time of $202.24$ seconds. For odd numbers, we obtained an accuracy of $0.9792$ with a training time of $237.65$ seconds. 
+Our hyperparameters in this task included the number of iteration / epochs which were $300$ and the learning rate which was $0.01$. We used the adam optimizer in our hyparparameter tuning ans the SGD optimizer had lower results as compared to adam.  For the even data set, the model achieved an accuracy of $0.9807$ on the training dataset with a training time of $202.24$ seconds. For odd numbers, we obtained an accuracy of $0.9792$ with a training time of $237.65$ seconds. 
 
 From this, we observe that our model performed slightly higher on the odd dataset as compared to the even numbers. 
 
@@ -83,7 +83,7 @@ Transfer learning was applied by using the parameters of the trained neural netw
     
 $\textbf{Hyperparameters:}$
 
- Our hyperparameters in this task included the number of iteration / epochs which were $ 300 $ and the learning rate which was $ 0.01 $. We used the adam optimizer as well. Using the weights obtained on the odd neural network and applying it on the even dataset, the model obtained an accuracy of $ 0.9707 $ on the training dataset with a training time of $ 113 $ seconds. On the other hand, using the weights obtained on the even neural network and applying it on the odd dataset, the model obtained an accuracy of $ 0.95 $ on the training dataset with a training time of $ 97.92 $ seconds.  
+ Our hyperparameters in this task included the number of iteration / epochs which were $300$ and the learning rate which was $0.01$. We used the adam optimizer as well. Using the weights obtained on the odd neural network and applying it on the even dataset, the model obtained an accuracy of $0.9707$ on the training dataset with a training time of $113$ seconds. On the other hand, using the weights obtained on the even neural network and applying it on the odd dataset, the model obtained an accuracy of $0.95$ on the training dataset with a training time of $97.92$ seconds.  
 
  
 From this, we observe that, the transfer learning  models took less time as compared to the neural networks without transfer. Looking at the accuracy, we see that the accuracy on the even numbers increased slightly while on the odd transfer learning slightly decreased. This implies that for the odd numbers, a negative transfer learning had occurred since the transfer method decreased the performance. One of the major challenges in developing transfer methods is to produce positive transfer between appropriately related tasks while avoiding negative transfer between tasks that are less related.
@@ -105,5 +105,4 @@ of Neural Networks by leveraging pre-trained parameters, leading to improved per
 Torrey, L., Shavlik, J. (2010). Transfer learning. In Handbook of research on machine learning applications and
 trends: algorithms, methods, and techniques (pp. 242-264). IGI global.
 
-Weiss, K., Khoshgoftaar, T. M., Wang, D. (2016). A survey of transfer learning. Journal of Big data, 3,
-1-40.
+Weiss, K., Khoshgoftaar, T. M., Wang, D. (2016). A survey of transfer learning. Journal of Big data, 3,1-40.
