@@ -74,6 +74,7 @@ class Softmax(nn.Module):
     sns.heatmap(cm, annot=True, fmt='g', ax=ax, xticklabels=[1, 3, 5, 7, 9], yticklabels=[1, 3, 5, 7, 9]);
     ax.set_xlabel('Predicted labels');ax.set_ylabel('True labels');
     ax.set_title('Confusion Matrix');
+    plt.show()
 
   def confusiom_matrix_even(self,y,pred):
     
@@ -82,6 +83,7 @@ class Softmax(nn.Module):
     sns.heatmap(cm, annot=True, fmt='g', ax=ax, xticklabels=[0, 2, 4, 6, 8], yticklabels=[0, 2, 4, 6, 8]);
     ax.set_xlabel('Predicted labels');ax.set_ylabel('True labels');
     ax.set_title('Confusion Matrix');
+    plt.show()
       #ax.xaxis.set_ticklabels(T5_lables); ax.yaxis.set_ticklabels(T5_lables);
 
 
@@ -138,13 +140,13 @@ class Softmax(nn.Module):
       self.confusiom_matrix_odd(y_test_odd,y_predicted_cls_odd)
       print(np.unique(y_test_odd),np.unique(y_predicted_cls_odd))
 
-model_s = Softmax(784,5)
-X, y = model_s.split(model_s.load_data("df_even"))
-X_train, X_test, y_train, y_test = train_test_split(X, model_s.encode_even(y), test_size=0.2, random_state=1)
+# model_s = Softmax(784,5)
+# X, y = model_s.split(model_s.load_data("df_even"))
+# X_train, X_test, y_train, y_test = train_test_split(X, model_s.encode_even(y), test_size=0.2, random_state=1)
 
-X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1)
-print(X_train.shape,y_train.shape,X_test.shape,y_test.shape,X_val.shape,y_val.shape)
-X_train_tensor = torch.tensor(X_train, dtype=torch.float32)/255
-y_train_tensor = torch.tensor(y_train, dtype=torch.float32)
-X_test_tensor = torch.tensor(X_test, dtype=torch.float32)/255
-model_s.fit_foftmax(X_train_tensor,y_train_tensor,X_test_tensor,y_test,model_s,300,0.01)
+# X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1)
+# print(X_train.shape,y_train.shape,X_test.shape,y_test.shape,X_val.shape,y_val.shape)
+# X_train_tensor = torch.tensor(X_train, dtype=torch.float32)/255
+# y_train_tensor = torch.tensor(y_train, dtype=torch.float32)
+# X_test_tensor = torch.tensor(X_test, dtype=torch.float32)/255
+# model_s.fit_foftmax(X_train_tensor,y_train_tensor,X_test_tensor,y_test,model_s,300,0.01)
