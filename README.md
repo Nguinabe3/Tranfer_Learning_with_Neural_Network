@@ -40,7 +40,7 @@ $$g(z) = \begin{cases}
 
 > $\textbf{Task 1: Softmax regresssion}$
     
-$\textbf{Model Selection:}$
+>> Model Selection:
 
 We used a $\textit{\textbf{Soft-max Regression model}}$ to perform our multi-class classification task.
     
@@ -52,7 +52,7 @@ Our hyperparameters in this task included the number of iteration / epochs which
    
 > $\textbf{Task 2: Neural Network}$
     
-$\textbf{Model Selection: }$
+>> Model Selection:
 
 We used a $\textit{\textbf{Neural Network} }$ to perform our multi-class classification task. Our hidden layer had the ReLU activation function to capture the complex patterns in the dataset.
     
@@ -65,7 +65,7 @@ From this, we observe that our model performed slightly higher on the odd datase
 
 > $\textbf{Task 3: Transfer Learning}$
     
-$\textbf{Model Selection: }$
+>> Model Selection:
 
 Transfer learning was applied by using the parameters of the trained neural network as a transfer function for the opposite classification task. 
     
