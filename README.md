@@ -1,24 +1,11 @@
 # Transfer Learning With Neural Network using Pytorch
 ## Abstract
 We applied transfer learning on the MNIST dataset that contains digits from $0$ to $9$ after dividing it into two, even and odd numbers. In comparison to the softmax regression model, transfer learning outperformed softmax regression on both datasets. On the odd data set, transfer learning had an accuracy of $0.95$ while softmax had an accuracy of $0.9804$ on the training data set, whereas, on the even data set, transfer learning had an accuracy of $0.9707$ while softmax regression had an accuracy of $0.9641$ on the training data set. From this comparison, we observed that transfer learning allows the model to benefit from the knowledge learned on related task leading to improved accuracy and faster convergence. 
-## Introduction
-Transfer learning is ML model technique where a model on one task is adapted for use on a second related task. Transfer methods are dependent on the machine learning algorithms being used to learn the tasks and are usually considered as extensions of those algorithms. Some of the work in transfer learning are based in the context of inductive learning, and involves classification and inference algorithms such as neural networks, Bayesian networks etc.
-## Background information
-As humans, we have the ability to transfer knowledge between tasks. That is, we are able to recognize and apply our previous knowledge on new tasks and the more related the new tasks are, the easily we master it. On the other hand,  common ML algorithms, address isolated tasks. Transfer learning attempts to improve on traditional learning by transferring the knowledge learned in one task to other related tasks and by doing so improving its learning. 
-
-The goal of transfer learning is to improve the learning performance of the model. We have three ways on measuring how transfer learning might improve the performance:
-
-1. The initial performance achievable in the target task using only the transferred knowledge, before any further learning is done, compared to the initial performance.
-
-2. The amount of time it takes to fully learn the target task given the transferred knowledge compared to the amount of time to learn it from scratch. 
-
-3. The final performance level achievable in the target task compared to the final level without transfer.
-
 
 ### Problem Statement
- We aim to apply transfer learning on the MNIST data set to compare the performance of softmax regression and neural network models in classifying odd and even numbers from the given dataset. The MNIST data set contains handwritten numbers form $0$ to $9$.
- We will explore the effectiveness of transfer learning by utilizing the pre-trained  neural network that we will build for the opposite parameter task. That is, we will use the odd neural network weights on the even data set and vice versa.
- By comparing these, three methods, our goal is to identify the most effective method for this classification task.
+
+Transfer learning is ML model technique where a model on one task is adapted for use on a second related task. Transfer methods are dependent on the machine learning algorithms being used to learn the tasks and are usually considered as extensions of those algorithms. Some of the work in transfer learning are based in the context of inductive learning, and involves classification and inference algorithms such as neural networks, Bayesian networks etc. In this work,  We aim to apply transfer learning on the MNIST data set to compare the performance of softmax regression and neural network models in classifying odd and even numbers from the given dataset. The MNIST data set contains handwritten numbers form  to . We will explore the effectiveness of transfer learning by utilizing the pre-trained neural network that we will build for the opposite parameter task. That is, we will use the odd neural network weights on the even data set and vice versa. By comparing these, three methods, our goal is to identify the most effective method for this classification task.
+
 
 ## Methodology
 ### Data Preparation:
@@ -98,7 +85,7 @@ of Neural Networks by leveraging pre-trained parameters, leading to improved per
 # Usage case :
  1. Clone the repository using: git clone https://github.com/Nguinabe3/Tranfer_Learning_with_Neural_Network 
  
- 2. Go to load_data.py and run the content. This will download the MNIST data, split in to EVEN and ODD and save them as .csv file namely df_odd and df_even.
+ 2. Go to load_data.py and run the content using : python load_data.py.This will download the MNIST data, split in to EVEN and ODD and save them as .csv file namely df_odd and df_even.
 
 3. Go to main.py file and run it. The code is  as most interactive to guide you on your analysis.
 
